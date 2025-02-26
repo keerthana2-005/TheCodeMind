@@ -3,25 +3,25 @@ import os
 import unittest
 from unittest.mock import patch
 
-# Add the core directory to sys.path
+# Add the core directory to sys.path to ensure module imports work
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core")))
 
 # Import the function from gemini_analyzer
 from gemini_analyzer import analyze_with_gemini
 
-
 class TestGeminiAnalyzer(unittest.TestCase):
+    """Unit tests for the analyze_with_gemini function."""
 
     @patch("gemini_analyzer.genai.GenerativeModel")
     def test_empty_ast_json(self, mock_model):
-        """Test how function handles an empty AST JSON."""
+        """Test how the function handles an empty AST JSON input."""
         mock_model.return_value.start_chat.return_value.send_message.return_value.text = ""
         response = analyze_with_gemini({})
         self.assertEqual(response, "")
 
     @patch("gemini_analyzer.read_config")
     def test_missing_api_key(self, mock_read_config):
-        """Test if function raises an error when API key is missing."""
+        """Test if the function raises an error when the API key is missing."""
         mock_read_config.return_value = {"gemini": {"api_key": None}}
         with self.assertRaises(ValueError) as context:
             analyze_with_gemini({"ast": "sample"})
@@ -29,7 +29,7 @@ class TestGeminiAnalyzer(unittest.TestCase):
 
     @patch("gemini_analyzer.genai.GenerativeModel")
     def test_unexpected_api_error(self, mock_model):
-        """Test if function handles unexpected errors from Gemini API."""
+        """Test if the function handles unexpected errors from the Gemini API gracefully."""
         mock_model.return_value.start_chat.return_value.send_message.side_effect = Exception("API Error")
         response = analyze_with_gemini({"ast": "sample"})
         self.assertTrue(response.startswith("Error: Failed to process AST"))
@@ -40,7 +40,6 @@ class TestGeminiAnalyzer(unittest.TestCase):
         mock_model.return_value.start_chat.return_value.send_message.return_value.text = "Error: Undefined variable 'x' in function 'foo' at line 3."
         response = analyze_with_gemini({"ast": "valid_ast"})
         self.assertEqual(response, "Error: Undefined variable 'x' in function 'foo' at line 3.")
-
 
 if __name__ == "__main__":
     unittest.main()
