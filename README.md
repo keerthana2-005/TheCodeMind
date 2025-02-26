@@ -8,8 +8,10 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 
 ##  Problem  
  **Manual debugging is slow, error-prone, and inefficient.**  
-- Developers struggle with **hidden logical flaws, infinite loops, and undefined variables** that traditional linters miss.  
-- Debugging large codebases **wastes time** and **delays development cycles**.  
+- Developers struggle with **hidden logical flaws, infinite loops, and undefined variables** that traditional linters miss.
+- The current version supports **manual bug detection** through a separate UI. Future improvements include:  
+- **VS Code Extension** for real-time error detection directly in the editor.   
+
 
 ##  Solution  
 ⚡ **AI-driven detection system.**  
@@ -29,7 +31,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 🚧 The current version supports **manual bug detection** when the user submits the code. Future versions will:  
 - Enable **real-time error detection** while typing.  
 - Support **multiple programming languages** beyond Python.  
-- Train the model on a larger dataset for **better accuracy and deeper insights**.  
+- **VS Code Extension** for real-time error detection directly in the editor.  
 
 ## 🛠️ Tech Stack  
 - **Backend:** Flask, Python  
