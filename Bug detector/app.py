@@ -8,6 +8,11 @@ app.secret_key = "supersecretkey"  # Used for session storage
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    """
+    Handles the homepage where users can enter an API key.
+    If a valid API key is provided, it is stored in the session,
+    and the user is redirected to the code input page.
+    """
     if request.method == "POST":
         api_key = request.form.get("api_key")
         if api_key:
@@ -17,6 +22,12 @@ def index():
 
 @app.route("/code", methods=["GET", "POST"])
 def code_input():
+    """
+    Handles the code submission page.
+    Users can enter Python code, which is analyzed for syntax and logic errors.
+    The AST JSON is generated and passed to Gemini for further analysis.
+    If no API key is found in the session, the user is redirected to the index page.
+    """
     if "api_key" not in session:
         return redirect(url_for("index"))  # Redirect if API key is missing
 
@@ -28,10 +39,13 @@ def code_input():
         if not submitted_code.strip():
             result = "Error: No code provided."
         else:
-            ast_json = analyze_ast(submitted_code)
-            result = analyze_with_gemini(ast_json, session["api_key"])  # Pass API key
+            ast_json = analyze_ast(submitted_code)  # Convert code to AST JSON
+            result = analyze_with_gemini(ast_json, session["api_key"])  # Pass API key for Gemini analysis
 
     return render_template("code.html", result=result, submitted_code=submitted_code)
 
 if __name__ == "__main__":
+    """
+    Starts the Flask application on port 5001 in debug mode.
+    """
     app.run(debug=True, port=5001)
