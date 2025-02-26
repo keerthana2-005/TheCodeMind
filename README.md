@@ -9,7 +9,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 ##  Problem  
  **Manual debugging is slow, error-prone, and inefficient.**  
 - Developers struggle with **hidden logical flaws, infinite loops, and undefined variables** that traditional linters miss.
-- The current version supports **manual bug detection** through a separate UI. Future improvements include:    
+- The current version supports **manual bug detection** through a separate UI.    
 
 
 ##  Solution  
