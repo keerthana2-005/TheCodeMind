@@ -1,5 +1,8 @@
 # 🛠️ TheCodeMind  
 
+## 📝 Note  
+**This file documents only the features implemented so far.**  
+
 ## 📝 Overview  
 A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed to **analyze AST JSON and detect logical & syntax errors with precision**.  
 
@@ -15,12 +18,12 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 - Provides **actionable, pinpointed error reports**, making debugging **faster & more efficient**.  
 
 ## 🎯 Key Features  
-- 📌 **AST-based analysis** to detect logic & syntax issues.  
-- ⚙️ **Flask-powered API** for real-time bug detection.  
-- 🤖 **Gemini AI integration** for advanced error detection.  
-- 🔍 **Minimal false positives**, ensuring high accuracy.  
-- 🖥️ **Basic UI** for an intuitive debugging experience.  
-- 🔑 **User enters a valid Gemini API key in the UI** for secure AI access.  
+-  **AST-based analysis** to detect logic & syntax issues.  
+-  **Flask-powered API** for real-time bug detection.  
+-  **Gemini AI integration** for advanced error detection.  
+-  **Minimal false positives**, ensuring high accuracy.  
+-  **Basic UI** for an intuitive debugging experience.  
+-  **User enters a valid Gemini API key in the UI** for secure AI access.  
 
 ## 🚀 Future Enhancements  
 🚧 The current version supports **manual bug detection** when the user submits the code. Future versions will:  
@@ -50,7 +53,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 1️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/keerthana2-005/TheCodeMind.git
-cd Bug-Detector
+cd "Bug Detector"
 ```
 
 2️⃣ **Install dependencies**  
