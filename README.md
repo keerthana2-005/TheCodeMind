@@ -9,7 +9,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 ##  Problem  
  **Manual debugging is slow, error-prone, and inefficient.**  
 - Developers struggle with **hidden logical flaws, infinite loops, and undefined variables** that traditional linters miss.
-- The current version supports **manual bug detection** through a separate UI.    
+- The current version supports **manual logical and syntatic bug detection** through a separate UI.    
 
 
 ##  Solution  
@@ -69,7 +69,7 @@ python app.py
 
 4️⃣ **Access the UI**  
 - Open `http://localhost:5001` in your browser.  
-- Enter a valid **Gemini API key** when prompted.  
+- Enter a valid **Gemini API key** .  
 
 ## 🛠️ How It Works  
 1️⃣ **Write or update Python code in the editor.**  
