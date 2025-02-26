@@ -1,7 +1,7 @@
 # 🛠️ TheCodeMind  
 
 ## 📝 Note  
-**This file documents only the features implemented so far.**  
+**This file documents only the features implemented so far.Focusing on one program language(Python)**  
 
 ## 📝 Overview  
 A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed to **analyze AST JSON and detect logical & syntax errors with precision**.  
@@ -9,8 +9,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 ##  Problem  
  **Manual debugging is slow, error-prone, and inefficient.**  
 - Developers struggle with **hidden logical flaws, infinite loops, and undefined variables** that traditional linters miss.
-- The current version supports **manual bug detection** through a separate UI. Future improvements include:  
-- **VS Code Extension** for real-time error detection directly in the editor.   
+- The current version supports **manual bug detection** through a separate UI. Future improvements include:    
 
 
 ##  Solution  
