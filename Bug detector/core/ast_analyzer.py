@@ -2,9 +2,12 @@ import ast
 import json
 
 class ASTVisitor(ast.NodeVisitor):
+    
+    # Initializes an empty list to store AST node data
     def __init__(self):
         self.data = []
 
+    # Visits each AST node and returns its dictionary representation
     def generic_visit(self, node):
         node_dict = {"type": type(node).__name__}
 
@@ -23,6 +26,7 @@ class ASTVisitor(ast.NodeVisitor):
 
         return node_dict
 
+    # Processes the module node and stores its body
     def visit_Module(self, node):
         module_dict = {"type": "Module", "body": []}
         self.data.append(module_dict)
@@ -32,6 +36,7 @@ class ASTVisitor(ast.NodeVisitor):
 
         return module_dict
 
+# Parses Python code into an AST and returns its JSON representation
 def analyze_ast(code):
     try:
         tree = ast.parse(code)
@@ -39,4 +44,4 @@ def analyze_ast(code):
         visitor.visit(tree)
         return json.dumps(visitor.data, indent=4)
     except SyntaxError as e:
-        return json.dumps({"error": f"Syntax error: {e}"}, indent=4)  
+        return json.dumps({"error": f"Syntax error: {e}"}, indent=4)
