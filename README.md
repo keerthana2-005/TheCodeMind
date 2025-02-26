@@ -80,7 +80,9 @@ python app.py
 - **Enhances developer productivity** 🚀  
 - **Reduces debugging time significantly** ⏳  
 - **Automates logic error detection** 🤖  
-- **Ensures cleaner, high-quality code** ✅  
+- **Ensures cleaner, high-quality code** ✅
+- ![Bug Detector UI Screenshot](assets.png)
+
 
 ## 📬 Contact  
 For queries or collaborations, reach out at [keerthisvc14@gmail.com].  
