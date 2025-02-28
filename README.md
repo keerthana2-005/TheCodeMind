@@ -69,7 +69,13 @@ python app.py
 
 4️⃣ **Access the UI**  
 - Open `http://localhost:5001` in your browser.  
-- Enter a valid **Gemini API key** .  
+- Enter a valid **Gemini API key** .
+- To test the bug detection, try running a faulty Python snippet like:  
+
+  ```python
+  count = 0
+  while count < 5:
+      print("Counting...", count)
 
 ## 🛠️ How It Works  
 1️⃣ **Write or update Python code in the editor.**  
