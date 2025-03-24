@@ -1,9 +1,9 @@
-# 🛠️ TheCodeMind  
+#  TheCodeMind  
 
-## 📝 Note  
+##  Note  
 **This file documents only the features implemented so far.Focusing on one program language(Python)**  
 
-## 📝 Overview  
+##  Overview  
 A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed to **analyze AST JSON and detect logical & syntax errors with precision**.  
 
 ##  Problem  
@@ -13,12 +13,12 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 
 
 ##  Solution  
-⚡ **AI-driven detection system.**  
+ **AI-driven detection system.**  
 - **Analyzes code**, ensuring minimal processing overhead.  
 - Detects **critical logic issues instantly**, including **unreachable code, faulty loops, and incorrect conditionals**.  
 - Provides **actionable, pinpointed error reports**, making debugging **faster & more efficient**.  
 
-## 🎯 Key Features  
+##  Key Features  
 -  **AST-based analysis** to detect logic & syntax issues.  
 -  **Flask-powered API** for real-time bug detection.  
 -  **Gemini AI integration** for advanced error detection.  
@@ -26,8 +26,8 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
 -  **Basic UI** for an intuitive debugging experience.  
 -  **User enters a valid Gemini API key in the UI** for secure AI access.  
 
-## 🚀 Future Enhancements  
-🚧 The current version supports **manual bug detection** when the user submits the code. Future versions will:  
+##  Future Enhancements  
+ The current version supports **manual bug detection** when the user submits the code. Future versions will:  
 - Enable **real-time error detection** while typing.  
 - Support **multiple programming languages** beyond Python.  
 - **VS Code Extension** for real-time error detection directly in the editor.  
@@ -50,7 +50,7 @@ A **real-time Python bug detection tool** using **Flask & Gemini AI**, designed 
  ┣ 📜 README.md        # Project documentation
 ```
 
-## 🚀 Installation & Setup  
+##  Installation & Setup  
 1️⃣ **Clone the repository**  
 ```bash
 git clone https://github.com/keerthana2-005/TheCodeMind.git
@@ -77,19 +77,19 @@ python app.py
   while count < 5:
       print("Counting...", count)
 
-## 🛠️ How It Works  
+##  How It Works  
 1️⃣ **Write or update Python code in the editor.**  
 2️⃣ **Click 'Analyze'** – The updated AST is sent to Gemini AI.  
 3️⃣ **Get instant, precise error messages** with issue location.  
 4️⃣ **Fix the bugs & improve your code quality effortlessly!**  
 
-## 🎯 Why This Project?  
-- **Enhances developer productivity** 🚀  
-- **Reduces debugging time significantly** ⏳  
-- **Automates logic error detection** 🤖  
-- **Ensures cleaner, high-quality code** ✅
+##  Why This Project?  
+- **Enhances developer productivity**   
+- **Reduces debugging time significantly**   
+- **Automates logic error detection**   
+- **Ensures cleaner, high-quality code** 
 - ![Bug Detector UI Screenshot](assets.png)
 
 
-## 📬 Contact  
+##  Contact  
 For queries or collaborations, reach out at [keerthisvc14@gmail.com].  
